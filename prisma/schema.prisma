@@ -1,0 +1,148 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String    @id @default(uuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  role          Role      @default(VOLUNTEER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  volunteerProfile  VolunteerProfile?
+  organizationProfile OrganizationProfile?
+}
+
+enum Role {
+  VOLUNTEER
+  ORGANIZATION
+  ADMIN
+}
+
+model VolunteerProfile {
+  id               String   @id @default(uuid())
+  userId           String   @unique
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  city             String?
+  coordinatesLat   Float?
+  coordinatesLng   Float?
+  skills           String?  // Stored as comma-separated values or JSON string
+  interests        String?
+  certifications   String?
+  availability     String?
+  reliabilityScore Float    @default(5.0)
+  engagementScore  Float    @default(0.0)
+  
+  registrations    Registration[]
+  taskAssignments  TaskAssignment[]
+}
+
+model OrganizationProfile {
+  id          String   @id @default(uuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  orgName     String
+  description String?
+  website     String?
+
+  events      Event[]
+}
+
+model Event {
+  id              String   @id @default(uuid())
+  organizationId  String
+  organization    OrganizationProfile @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  title           String
+  description     String
+  location        String
+  date            DateTime
+  capacity        Int      @default(0)
+  requiredSkills  String?  // Stored as JSON or comma-separated
+  eventType       String
+  priorityLevel   String   @default("NORMAL")
+  impactCategory  String
+
+  registrations   Registration[]
+  tasks           EventTask[]
+  metrics         ImpactMetric[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Registration {
+  id              String   @id @default(uuid())
+  volunteerId     String
+  eventId         String
+  status          RegistrationStatus @default(PENDING)
+  matchedScore    Float?   // Score given by intelligent matching algorithm
+  
+  volunteer       VolunteerProfile @relation(fields: [volunteerId], references: [id], onDelete: Cascade)
+  event           Event            @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  
+  attendance      Attendance?
+
+  createdAt       DateTime @default(now())
+}
+
+enum RegistrationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED
+}
+
+model EventTask {
+  id              String   @id @default(uuid())
+  eventId         String
+  title           String
+  description     String?
+  requiredSkills  String?
+  
+  event           Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  assignments     TaskAssignment[]
+}
+
+model TaskAssignment {
+  id              String   @id @default(uuid())
+  taskId          String
+  volunteerId     String
+  
+  task            EventTask        @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  volunteer       VolunteerProfile @relation(fields: [volunteerId], references: [id], onDelete: Cascade)
+  
+  completed       Boolean  @default(false)
+}
+
+model Attendance {
+  id              String   @id @default(uuid())
+  registrationId  String   @unique
+  hoursLogged     Float    @default(0)
+  verified        Boolean  @default(false)
+  feedback        String?
+  
+  registration    Registration @relation(fields: [registrationId], references: [id], onDelete: Cascade)
+}
+
+model ImpactMetric {
+  id                  String   @id @default(uuid())
+  eventId             String
+  event               Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  
+  totalHours          Float    @default(0)
+  beneficiariesReached Int      @default(0)
+  treesPlanted        Int      @default(0)
+  customMetricName    String?
+  customMetricValue   Float?
+  
+  createdAt           DateTime @default(now())
+}

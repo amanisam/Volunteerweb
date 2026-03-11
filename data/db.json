@@ -1,0 +1,237 @@
+{
+  "users": [
+    {
+      "id": "110f03a4-33d2-4857-8dbd-a8d8b3bf8990",
+      "name": "System Admin",
+      "email": "admin@vcits.org",
+      "password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMqJqhg5DF1LK2w1kxDEHrVZWa",
+      "role": "ADMIN",
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    },
+    {
+      "id": "66314188-67ef-4c28-889d-58e8e7df7eca",
+      "name": "Green Earth Foundation",
+      "email": "org@vcits.org",
+      "password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMqJqhg5DF1LK2w1kxDEHrVZWa",
+      "role": "ORGANIZATION",
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    },
+    {
+      "id": "34b732d2-ed36-4778-b3de-f617d19e35a1",
+      "name": "Alice Kamau",
+      "email": "volunteer@vcits.org",
+      "password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMqJqhg5DF1LK2w1kxDEHrVZWa",
+      "role": "VOLUNTEER",
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    },
+    {
+      "id": "074ad266-1d2a-4a3b-9e8a-313e42c12104",
+      "name": "Brian Otieno",
+      "email": "volunteer2@vcits.org",
+      "password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMqJqhg5DF1LK2w1kxDEHrVZWa",
+      "role": "VOLUNTEER",
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    },
+    {
+      "name": "Amani",
+      "email": "amaniasam254@gmail.com",
+      "password": "23b0e3807064638ee7e3e1cb7196d3e5:c65386b743667d879ba969fab1f41c6fada40529f93a99a0f1a54329133ccd9fac46f06596a7c2f7fd2642dfc517c5913db8af72e3448134eb9f26ffe7789feb",
+      "role": "VOLUNTEER",
+      "id": "c40ee56f-abca-4b03-a4e2-8497ca8a85d4",
+      "createdAt": "2026-03-11T20:26:56.072Z"
+    },
+    {
+      "name": "Amoni organization",
+      "email": "amanisam254@gmail.com",
+      "password": "77a74c89d46873fff389f3c745a69b62:aa4e47ad739d8b4b871d277719ac4a490d75c6da64a8b9d13134f3f9d7508b44d03ad759cb37efbd6332bdb512536a6275aa1ca4ec671b21989e241c9c4429ff",
+      "role": "VOLUNTEER",
+      "id": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "createdAt": "2026-03-11T20:41:27.958Z"
+    }
+  ],
+  "volunteerProfiles": [
+    {
+      "id": "924852e7-bac7-403a-ab0d-e54c14adacf9",
+      "userId": "34b732d2-ed36-4778-b3de-f617d19e35a1",
+      "city": "Nairobi",
+      "coordinatesLat": -1.2921,
+      "coordinatesLng": 36.8219,
+      "skills": [
+        "First Aid",
+        "Teaching",
+        "Communication"
+      ],
+      "interests": [
+        "Environment",
+        "Education"
+      ],
+      "certifications": [
+        "CPR",
+        "First Aid"
+      ],
+      "availability": "Weekends",
+      "reliabilityScore": 8.5,
+      "engagementScore": 75,
+      "bio": "Passionate about environmental conservation and community education."
+    },
+    {
+      "id": "852aaae2-f30a-4d43-808d-b4dbcefc7163",
+      "userId": "074ad266-1d2a-4a3b-9e8a-313e42c12104",
+      "city": "Mombasa",
+      "coordinatesLat": -4.0435,
+      "coordinatesLng": 39.6682,
+      "skills": [
+        "Logistics",
+        "Driving",
+        "Construction"
+      ],
+      "interests": [
+        "Community",
+        "Health"
+      ],
+      "certifications": [],
+      "availability": "Weekday evenings and weekends",
+      "reliabilityScore": 7.2,
+      "engagementScore": 45,
+      "bio": "Community development enthusiast with logistics background."
+    },
+    {
+      "userId": "c40ee56f-abca-4b03-a4e2-8497ca8a85d4",
+      "city": "",
+      "coordinatesLat": 0,
+      "coordinatesLng": 0,
+      "skills": [],
+      "interests": [],
+      "certifications": [],
+      "availability": "",
+      "reliabilityScore": 5,
+      "engagementScore": 0,
+      "bio": "",
+      "id": "3f816cbd-55c0-4088-8991-3093866ec61b"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "city": "",
+      "coordinatesLat": 0,
+      "coordinatesLng": 0,
+      "skills": [],
+      "interests": [],
+      "certifications": [],
+      "availability": "",
+      "reliabilityScore": 5,
+      "engagementScore": 0,
+      "bio": "",
+      "id": "2b890d2a-372d-49bf-b778-2e6cd445b5b7"
+    }
+  ],
+  "organizationProfiles": [
+    {
+      "id": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "userId": "66314188-67ef-4c28-889d-58e8e7df7eca",
+      "orgName": "Green Earth Foundation",
+      "description": "Environmental NGO focused on tree planting and conservation in East Africa.",
+      "website": "https://greenearth.org"
+    }
+  ],
+  "events": [
+    {
+      "id": "d6265b7f-6939-44b8-9e89-88368b527bf9",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "title": "Karura Forest Tree Planting Drive",
+      "description": "Join us for a massive tree planting exercise in Karura Forest. We will be planting 500 indigenous trees and educating volunteers on environmental conservation.",
+      "location": "Karura Forest, Nairobi (-1.2450, 36.8280)",
+      "date": "2026-03-18T19:51:46.278Z",
+      "capacity": 50,
+      "requiredSkills": [
+        "First Aid",
+        "Communication"
+      ],
+      "eventType": "Tree Planting",
+      "priorityLevel": "HIGH",
+      "impactCategory": "Environment",
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    },
+    {
+      "id": "b6f4078c-1c3b-439e-b26b-4486c6a29e5b",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "title": "Community Health Awareness Camp",
+      "description": "Free health screenings and awareness sessions for underserved communities in Kibera.",
+      "location": "Kibera Community Center, Nairobi (-1.3138, 36.7930)",
+      "date": "2026-03-25T19:51:46.278Z",
+      "capacity": 30,
+      "requiredSkills": [
+        "First Aid",
+        "Medical",
+        "Communication"
+      ],
+      "eventType": "Medical Camp",
+      "priorityLevel": "CRITICAL",
+      "impactCategory": "Health",
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    }
+  ],
+  "registrations": [
+    {
+      "volunteerId": "3f816cbd-55c0-4088-8991-3093866ec61b",
+      "eventId": "b6f4078c-1c3b-439e-b26b-4486c6a29e5b",
+      "status": "PENDING",
+      "matchedScore": 42,
+      "id": "5fca4b14-cd2d-4b48-9a27-4124bcbf57ca",
+      "createdAt": "2026-03-11T20:39:12.388Z"
+    },
+    {
+      "volunteerId": "2b890d2a-372d-49bf-b778-2e6cd445b5b7",
+      "eventId": "d6265b7f-6939-44b8-9e89-88368b527bf9",
+      "status": "PENDING",
+      "matchedScore": 42,
+      "id": "f3c752f6-0108-431a-8f42-f3d8c2008d62",
+      "createdAt": "2026-03-11T21:31:50.762Z"
+    }
+  ],
+  "taskAssignments": [],
+  "attendance": [],
+  "impactMetrics": [
+    {
+      "id": "59be6443-a0c2-45e1-86b0-36cb8112a961",
+      "eventId": "d6265b7f-6939-44b8-9e89-88368b527bf9",
+      "totalHours": 0,
+      "beneficiariesReached": 500,
+      "treesPlanted": 500,
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "3aaff4c1-5e91-4112-a161-20c0b0ed1d2f",
+      "userId": "34b732d2-ed36-4778-b3de-f617d19e35a1",
+      "message": "Welcome to VCITS! Complete your profile to get personalized event recommendations.",
+      "type": "WELCOME",
+      "read": false,
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    },
+    {
+      "id": "9b17ab75-abfb-4442-a63b-2ba3da4e38f4",
+      "userId": "66314188-67ef-4c28-889d-58e8e7df7eca",
+      "message": "Welcome! Your organization profile is ready. Start creating volunteer events.",
+      "type": "WELCOME",
+      "read": false,
+      "createdAt": "2026-03-11T19:51:46.271Z"
+    },
+    {
+      "userId": "c40ee56f-abca-4b03-a4e2-8497ca8a85d4",
+      "message": "You've registered for \"Community Health Awareness Camp\". Awaiting approval.",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "5b112944-dea9-49ed-8826-b98218204da1",
+      "createdAt": "2026-03-11T20:39:12.390Z"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "message": "You've registered for \"Karura Forest Tree Planting Drive\". Awaiting approval.",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "a7de10e1-9bf9-4f98-84d3-48342741a81f",
+      "createdAt": "2026-03-11T21:31:50.765Z"
+    }
+  ]
+}
