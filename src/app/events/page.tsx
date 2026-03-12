@@ -50,11 +50,7 @@ export default function EventsPage() {
               <h1 className="page-title">Volunteer Opportunities</h1>
               <p className="page-desc">Browse and find the perfect event to make an impact.</p>
             </div>
-            {user?.role === 'ORGANIZATION' && (
-              <Link href="/dashboard/organization?action=new-event" className="btn btn-primary">
-                + Add New Event
-              </Link>
-            )}
+
           </div>
 
           <div className="card" style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'flex-end', padding: '1.25rem' }}>
@@ -106,7 +102,6 @@ export default function EventsPage() {
                   </div>
                   <div className="event-meta">
                     <span className="event-meta-item">📍 {e.location}</span>
-                    <span className="event-meta-item">📅 {new Date(e.date).toLocaleDateString()}</span>
                     <span className="event-meta-item">👥 {e.capacity} spots available</span>
                   </div>
                   {e.requiredSkills?.length > 0 && (

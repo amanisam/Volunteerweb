@@ -47,6 +47,22 @@
       "role": "VOLUNTEER",
       "id": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
       "createdAt": "2026-03-11T20:41:27.958Z"
+    },
+    {
+      "name": "samson",
+      "email": "samsonmuuo3@gmail.com",
+      "password": "03c10ea884b0e2f06d16466fd6236c01:dd8f2b9de817a4c9ea6ce6b5fda25fbb0c43ba7b82ebf12857d112be67e18d72000c431319ce89547f198b0736537ddced6be20f3ccb86c0be505830e439fa5c",
+      "role": "VOLUNTEER",
+      "id": "b0107696-fda3-4347-abe2-9ea3cd852b25",
+      "createdAt": "2026-03-12T17:14:19.131Z"
+    },
+    {
+      "name": "samson",
+      "email": "samsonmanoah54@gmail.com",
+      "password": "1302f68fdedd9188b751138b3f0ca7f5:0fa1494138229de8112e039e64942ab73983e7ff6c2a6b7e27fd1db7eb0567781a63c835e35b81fe1285270f7959371f9a57f4c8e31cd9b5c62fac7e9721fe8e",
+      "role": "VOLUNTEER",
+      "id": "c11823d2-8462-4fe2-babc-75d6fef0e550",
+      "createdAt": "2026-03-12T17:15:54.560Z"
     }
   ],
   "volunteerProfiles": [
@@ -111,6 +127,32 @@
     },
     {
       "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "city": "Nairobi",
+      "coordinatesLat": 0,
+      "coordinatesLng": 0,
+      "skills": [
+        "Teaching",
+        "ict computer literate",
+        "IT",
+        "Animal Care",
+        "Cooking",
+        "Medical"
+      ],
+      "interests": [
+        "community",
+        "Education",
+        "Sports",
+        "Technology"
+      ],
+      "certifications": [],
+      "availability": "weekends",
+      "reliabilityScore": 5,
+      "engagementScore": 0,
+      "bio": "",
+      "id": "2b890d2a-372d-49bf-b778-2e6cd445b5b7"
+    },
+    {
+      "userId": "b0107696-fda3-4347-abe2-9ea3cd852b25",
       "city": "",
       "coordinatesLat": 0,
       "coordinatesLng": 0,
@@ -121,7 +163,21 @@
       "reliabilityScore": 5,
       "engagementScore": 0,
       "bio": "",
-      "id": "2b890d2a-372d-49bf-b778-2e6cd445b5b7"
+      "id": "7a105e1b-2f1b-4464-8b00-c3100632007b"
+    },
+    {
+      "userId": "c11823d2-8462-4fe2-babc-75d6fef0e550",
+      "city": "",
+      "coordinatesLat": 0,
+      "coordinatesLng": 0,
+      "skills": [],
+      "interests": [],
+      "certifications": [],
+      "availability": "",
+      "reliabilityScore": 5,
+      "engagementScore": 0,
+      "bio": "",
+      "id": "150bbf93-fac7-4510-944c-83b7e916dd9d"
     }
   ],
   "organizationProfiles": [
@@ -168,6 +224,323 @@
       "priorityLevel": "CRITICAL",
       "impactCategory": "Health",
       "createdAt": "2026-03-11T19:51:46.271Z"
+    },
+    {
+      "title": "Community Tech Workshop",
+      "description": "Help teach basic computer skills to seniors in the community.",
+      "location": "Downtown Community Center",
+      "date": "2026-03-19T17:38:43.724Z",
+      "capacity": 15,
+      "requiredSkills": [
+        "IT",
+        "Teaching",
+        "Communication"
+      ],
+      "eventType": "Education",
+      "priorityLevel": "NORMAL",
+      "impactCategory": "Education",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "2e9814af-662e-41e9-8107-894b113c21b8",
+      "createdAt": "2026-03-12T17:38:43.729Z"
+    },
+    {
+      "title": "City Park Cleanup Drive",
+      "description": "Join us in cleaning up the central city park. Tools and gloves provided.",
+      "location": "Central Park (34.0522, -118.2437)",
+      "date": "2026-03-15T17:38:43.725Z",
+      "capacity": 50,
+      "requiredSkills": [
+        "Logistics",
+        "Teamwork"
+      ],
+      "eventType": "Cleanup Drive",
+      "priorityLevel": "HIGH",
+      "impactCategory": "Environment",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "bda69b9a-e125-4ea2-9874-dfb888efeb1f",
+      "createdAt": "2026-03-12T17:38:43.731Z"
+    },
+    {
+      "title": "Free Medical Camp",
+      "description": "Providing free medical checkups for underprivileged families.",
+      "location": "Eastside Clinic",
+      "date": "2026-03-26T17:38:43.725Z",
+      "capacity": 20,
+      "requiredSkills": [
+        "Medical",
+        "First Aid",
+        "Registration"
+      ],
+      "eventType": "Medical Camp",
+      "priorityLevel": "CRITICAL",
+      "impactCategory": "Health",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "446043fc-83b1-439a-a9e3-6c5e84eff263",
+      "createdAt": "2026-03-12T17:38:43.733Z"
+    },
+    {
+      "title": "Food Bank Organization",
+      "description": "Sorting and packing food boxes for weekend distribution.",
+      "location": "Main Food Bank Warehouse",
+      "date": "2026-03-14T17:38:43.725Z",
+      "capacity": 30,
+      "requiredSkills": [
+        "Logistics",
+        "Physical",
+        "Teamwork"
+      ],
+      "eventType": "Food Drive",
+      "priorityLevel": "NORMAL",
+      "impactCategory": "Poverty",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "2a0ceb04-f72f-451b-a040-f84e92dd9d8d",
+      "createdAt": "2026-03-12T17:38:43.735Z"
+    },
+    {
+      "title": "Animal Shelter Assist",
+      "description": "Help walk dogs, clean enclosures, and socialize with rescued animals.",
+      "location": "City Animal Shelter",
+      "date": "2026-03-17T17:38:43.725Z",
+      "capacity": 10,
+      "requiredSkills": [
+        "Animal Care",
+        "Patience"
+      ],
+      "eventType": "Other",
+      "priorityLevel": "NORMAL",
+      "impactCategory": "Animal Welfare",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "d9fd3784-7ab1-44de-b146-0f6afaf74af8",
+      "createdAt": "2026-03-12T17:38:43.737Z"
+    },
+    {
+      "title": "Disaster Relief Prep",
+      "description": "Assembling emergency disaster relief kits.",
+      "location": "Red Cross Chapter",
+      "date": "2026-03-22T17:38:43.725Z",
+      "capacity": 40,
+      "requiredSkills": [
+        "Logistics",
+        "Management"
+      ],
+      "eventType": "Workshop",
+      "priorityLevel": "HIGH",
+      "impactCategory": "Community",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "db2e8bad-d92c-4430-98cc-a86c352a8ea5",
+      "createdAt": "2026-03-12T17:38:43.739Z"
+    },
+    {
+      "title": "Tree Planting Marathon",
+      "description": "Planting saplings to restore the local urban forest.",
+      "location": "North Hills Reserve (-1.2921, 36.8219)",
+      "date": "2026-04-01T17:38:43.725Z",
+      "capacity": 100,
+      "requiredSkills": [
+        "Physical",
+        "Environment"
+      ],
+      "eventType": "Tree Planting",
+      "priorityLevel": "MEDIUM",
+      "impactCategory": "Environment",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "5486c4f7-2b9a-4a28-93b9-39603ff7b2ec",
+      "createdAt": "2026-03-12T17:38:43.740Z"
+    },
+    {
+      "title": "Blood Donation Drive",
+      "description": "Assist with donor registration and post-donation monitoring.",
+      "location": "City Hospital",
+      "date": "2026-03-24T17:38:43.725Z",
+      "capacity": 25,
+      "requiredSkills": [
+        "Medical",
+        "First Aid",
+        "Communication"
+      ],
+      "eventType": "Medical Camp",
+      "priorityLevel": "HIGH",
+      "impactCategory": "Health",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "4f6fd931-4c88-43d5-93d3-48cc398e066b",
+      "createdAt": "2026-03-12T17:38:43.742Z"
+    },
+    {
+      "title": "Spring Book Drive Setup",
+      "description": "Organizing and categorizing donated books for the upcoming spring book fair.",
+      "location": "Main Library Downtown",
+      "date": "2026-03-12T09:00:00.000Z",
+      "capacity": 10,
+      "requiredSkills": [
+        "Logistics",
+        "Teamwork"
+      ],
+      "eventType": "Setup",
+      "priorityLevel": "NORMAL",
+      "impactCategory": "Education",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "a941c85d-fb84-4a1d-8c5f-971838ddd596",
+      "createdAt": "2026-03-12T18:12:54.755Z"
+    },
+    {
+      "title": "Elderly Home Entertainment Day",
+      "description": "Spend an afternoon playing games and chatting with residents at the local elderly home.",
+      "location": "Sunshine Retirement Village",
+      "date": "2026-03-12T13:00:00.000Z",
+      "capacity": 15,
+      "requiredSkills": [
+        "Communication",
+        "Patience",
+        "Arts"
+      ],
+      "eventType": "Community Engagement",
+      "priorityLevel": "NORMAL",
+      "impactCategory": "Community",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "dca9442f-b15f-4bc5-b4ae-30d6fcaa1790",
+      "createdAt": "2026-03-12T18:12:54.760Z"
+    },
+    {
+      "title": "After-School STEM Mentoring",
+      "description": "Mentor middle school students on basic robotics and programming.",
+      "location": "Eastside Middle School",
+      "date": "2026-03-12T15:30:00.000Z",
+      "capacity": 8,
+      "requiredSkills": [
+        "IT",
+        "Teaching",
+        "Technology"
+      ],
+      "eventType": "Mentoring",
+      "priorityLevel": "HIGH",
+      "impactCategory": "Education",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "db326f59-3cbe-4eb5-a6f7-b98beafc67d1",
+      "createdAt": "2026-03-12T18:12:54.763Z"
+    },
+    {
+      "title": "Community Garden Planting",
+      "description": "Help plant new vegetables and flowers in the community garden.",
+      "location": "Green Space Community Garden",
+      "date": "2026-03-12T10:00:00.000Z",
+      "capacity": 20,
+      "requiredSkills": [
+        "Physical",
+        "Environment"
+      ],
+      "eventType": "Gardening",
+      "priorityLevel": "MEDIUM",
+      "impactCategory": "Environment",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "9fc397d5-5cc6-424a-a9cb-6fb8ee757282",
+      "createdAt": "2026-03-12T18:12:54.764Z"
+    },
+    {
+      "title": "Soup Kitchen Evening Shift",
+      "description": "Serving dinner to the homeless community.",
+      "location": "Hope Soup Kitchen",
+      "date": "2026-03-12T17:00:00.000Z",
+      "capacity": 12,
+      "requiredSkills": [
+        "Cooking",
+        "Patience",
+        "Teamwork"
+      ],
+      "eventType": "Soup Kitchen",
+      "priorityLevel": "HIGH",
+      "impactCategory": "Poverty",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "a21fa6a1-1794-4b6a-9dbf-afbe76f6244f",
+      "createdAt": "2026-03-12T18:12:54.766Z"
+    },
+    {
+      "title": "Beach Cleanup Open Setup",
+      "description": "Set up tents, tables, and garbage bags for the large weekend beach cleanup.",
+      "location": "Sunset Beach Public Access",
+      "date": "2026-03-13T08:00:00.000Z",
+      "capacity": 25,
+      "requiredSkills": [
+        "Logistics",
+        "Physical",
+        "Environment"
+      ],
+      "eventType": "Cleanup Drive",
+      "priorityLevel": "CRITICAL",
+      "impactCategory": "Environment",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "40dabb98-db5a-4498-8703-e169da43172e",
+      "createdAt": "2026-03-12T18:12:54.768Z"
+    },
+    {
+      "title": "Fundraising Gala Logistics",
+      "description": "Assist with the setup of tables, chairs, and decorations for the annual fundraising gala.",
+      "location": "Grand Hotel Ballroom",
+      "date": "2026-03-13T14:00:00.000Z",
+      "capacity": 30,
+      "requiredSkills": [
+        "Logistics",
+        "Physical",
+        "Management"
+      ],
+      "eventType": "Setup",
+      "priorityLevel": "HIGH",
+      "impactCategory": "Community",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "f3e0f4b0-ef6b-4cbf-bcfd-7f5674004236",
+      "createdAt": "2026-03-12T18:12:54.770Z"
+    },
+    {
+      "title": "Animal Shelter Supply Sort",
+      "description": "Sort incoming donations of food, blankets, and toys for the animal shelter.",
+      "location": "City Animal Shelter Annex",
+      "date": "2026-03-13T10:00:00.000Z",
+      "capacity": 10,
+      "requiredSkills": [
+        "Animal Care",
+        "Logistics"
+      ],
+      "eventType": "Other",
+      "priorityLevel": "NORMAL",
+      "impactCategory": "Animal Welfare",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "b65add70-e57b-4e97-a73e-333c3646a9f1",
+      "createdAt": "2026-03-12T18:12:54.773Z"
+    },
+    {
+      "title": "Youth Sports Camp Coaching",
+      "description": "Assist coaches in running drills for the Friday youth basketball clinic.",
+      "location": "Community Rec Center",
+      "date": "2026-03-13T16:00:00.000Z",
+      "capacity": 12,
+      "requiredSkills": [
+        "Sports",
+        "Leadership",
+        "Teaching"
+      ],
+      "eventType": "Sports",
+      "priorityLevel": "NORMAL",
+      "impactCategory": "Health",
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "id": "0d972d58-14ef-473f-8eb8-16db8367c737",
+      "createdAt": "2026-03-12T18:12:54.776Z"
+    },
+    {
+      "organizationId": "99a7c829-c2aa-4088-bcd8-27dc10814fe0",
+      "title": "Cooking interaction",
+      "description": "to cook for children and elderly",
+      "location": "Nairobi",
+      "date": "2026-03-13T07:16",
+      "capacity": 20,
+      "requiredSkills": [
+        "Cooking",
+        "Communication",
+        "Environment"
+      ],
+      "eventType": "Community Engagement",
+      "priorityLevel": "MEDIUM",
+      "impactCategory": "Community",
+      "id": "814aa77d-b2a1-4b1d-969b-d190c312b3cb",
+      "createdAt": "2026-03-12T20:15:29.240Z"
     }
   ],
   "registrations": [
@@ -180,16 +553,47 @@
       "createdAt": "2026-03-11T20:39:12.388Z"
     },
     {
-      "volunteerId": "2b890d2a-372d-49bf-b778-2e6cd445b5b7",
-      "eventId": "d6265b7f-6939-44b8-9e89-88368b527bf9",
+      "volunteerId": "150bbf93-fac7-4510-944c-83b7e916dd9d",
+      "eventId": "b6f4078c-1c3b-439e-b26b-4486c6a29e5b",
       "status": "PENDING",
       "matchedScore": 42,
-      "id": "f3c752f6-0108-431a-8f42-f3d8c2008d62",
-      "createdAt": "2026-03-11T21:31:50.762Z"
+      "id": "9e4e4e77-3a16-40a8-8401-cdd4823be0af",
+      "createdAt": "2026-03-12T17:16:57.915Z"
+    },
+    {
+      "volunteerId": "2b890d2a-372d-49bf-b778-2e6cd445b5b7",
+      "eventId": "b65add70-e57b-4e97-a73e-333c3646a9f1",
+      "status": "APPROVED",
+      "matchedScore": 59.5,
+      "id": "de07e4cd-ffd9-4c28-9fa5-2b3c6391a85a",
+      "createdAt": "2026-03-12T18:39:17.341Z"
+    },
+    {
+      "volunteerId": "2b890d2a-372d-49bf-b778-2e6cd445b5b7",
+      "eventId": "2e9814af-662e-41e9-8107-894b113c21b8",
+      "status": "APPROVED",
+      "matchedScore": 64.3,
+      "id": "a8ebf043-207a-477a-bca9-8325fe7829b8",
+      "createdAt": "2026-03-12T19:23:27.686Z"
     }
   ],
   "taskAssignments": [],
-  "attendance": [],
+  "attendance": [
+    {
+      "registrationId": "de07e4cd-ffd9-4c28-9fa5-2b3c6391a85a",
+      "hoursLogged": 6,
+      "verified": false,
+      "feedback": "made 3 shelters ",
+      "id": "9b8a253c-7514-4b93-8781-6a5918ece5db"
+    },
+    {
+      "registrationId": "a8ebf043-207a-477a-bca9-8325fe7829b8",
+      "hoursLogged": 4,
+      "verified": false,
+      "feedback": "did several codes and production",
+      "id": "f1605302-a559-49da-96ca-71ef067e3d76"
+    }
+  ],
   "impactMetrics": [
     {
       "id": "59be6443-a0c2-45e1-86b0-36cb8112a961",
@@ -232,6 +636,70 @@
       "read": false,
       "id": "a7de10e1-9bf9-4f98-84d3-48342741a81f",
       "createdAt": "2026-03-11T21:31:50.765Z"
+    },
+    {
+      "userId": "c11823d2-8462-4fe2-babc-75d6fef0e550",
+      "message": "You've registered for \"Community Health Awareness Camp\". Awaiting approval.",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "b6589327-f35c-4558-814c-e828a894964a",
+      "createdAt": "2026-03-12T17:16:57.919Z"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "message": "You've registered for \"Community Tech Workshop\". Awaiting approval.",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "99e9b437-81eb-40c3-a38c-1252791cf999",
+      "createdAt": "2026-03-12T18:02:05.013Z"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "message": "You've registered for \"Animal Shelter Assist\". Awaiting approval.",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "756f7610-838c-431b-9fd9-8c52eedc265e",
+      "createdAt": "2026-03-12T18:02:09.433Z"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "message": "You've successfully registered for \"Animal Shelter Supply Sort\".",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "32b530cd-e986-4d27-b9d2-170f802137bd",
+      "createdAt": "2026-03-12T18:39:17.345Z"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "message": "You've opted out of \"Karura Forest Tree Planting Drive\".",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "8d19c127-c160-4c09-becb-19f6dab3d266",
+      "createdAt": "2026-03-12T18:40:38.648Z"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "message": "You've opted out of \"Community Tech Workshop\".",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "e514d00e-8f12-4fb8-aab8-2416efd84280",
+      "createdAt": "2026-03-12T18:42:58.851Z"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "message": "You've opted out of \"Animal Shelter Assist\".",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "4db7bdca-48c3-4e25-a765-40c9e275dc46",
+      "createdAt": "2026-03-12T18:44:00.637Z"
+    },
+    {
+      "userId": "7f13f92b-f0ed-4be5-9b4d-63153fcb2c24",
+      "message": "You've successfully registered for \"Community Tech Workshop\".",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "b91eec84-6c5c-4397-8bad-b6ebc0979c99",
+      "createdAt": "2026-03-12T19:23:27.689Z"
     }
   ]
 }

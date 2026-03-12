@@ -55,13 +55,13 @@ export async function POST(req: NextRequest) {
     const reg = db.registrations.create({
       volunteerId: profile.id,
       eventId,
-      status: 'PENDING',
+      status: 'APPROVED',
       matchedScore,
     });
 
     db.notifications.create({
       userId: user.id,
-      message: `You've registered for "${event.title}". Awaiting approval.`,
+      message: `You've successfully registered for "${event.title}".`,
       type: 'REGISTRATION',
       read: false,
     });
@@ -89,6 +89,27 @@ export async function POST(req: NextRequest) {
       }
     }
     return NextResponse.json(reg);
+  }
+
+  // Volunteer opts out of an event — fully remove the registration
+  if (action === 'optout') {
+    const { registrationId } = body;
+    const reg = db.registrations.findById(registrationId);
+    if (!reg) return NextResponse.json({ error: 'Registration not found' }, { status: 404 });
+
+    const event = db.events.findById(reg.eventId);
+    db.registrations.delete(registrationId);
+
+    if (event) {
+      db.notifications.create({
+        userId: user.id,
+        message: `You've opted out of "${event.title}".`,
+        type: 'REGISTRATION',
+        read: false,
+      });
+    }
+
+    return NextResponse.json({ success: true });
   }
 
   // Organization triggers match for an event

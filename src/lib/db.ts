@@ -241,6 +241,11 @@ export const db = {
       writeDB(data);
       return data.registrations[idx];
     },
+    delete: (id: string) => {
+      const data = readDB();
+      data.registrations = data.registrations.filter(r => r.id !== id);
+      writeDB(data);
+    },
   },
 
   taskAssignments: {

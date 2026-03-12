@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 
 interface Org {
   id: string;
@@ -13,6 +14,8 @@ interface Org {
 }
 
 export default function OrganizationsPage() {
+  const { data: session } = useSession();
+  const user = session?.user as { role?: string } | undefined;
   const [orgs, setOrgs] = useState<Org[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
@@ -37,9 +40,16 @@ export default function OrganizationsPage() {
       
       <div style={{ paddingTop: 'var(--nav-height)' }}>
         <div className="main-content fade-in">
-          <div className="page-header">
-            <h1 className="page-title">Community Organizations</h1>
-            <p className="page-desc">Discover NGOs and groups making an impact</p>
+          <div className="page-header-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
+            <div>
+              <h1 className="page-title">Community Organizations</h1>
+              <p className="page-desc">Discover NGOs and groups making an impact</p>
+            </div>
+            {user?.role === 'ORGANIZATION' && (
+              <Link href="/events/register" className="btn btn-primary">
+                + Register New Event
+              </Link>
+            )}
           </div>
 
           <div style={{ marginBottom: '2rem' }}>

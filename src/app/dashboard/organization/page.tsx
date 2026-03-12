@@ -113,7 +113,6 @@ function OrgDashboardContent() {
             <>
               <div className="page-header-row" style={{ marginBottom: '1.5rem' }}>
                 <div><h1 className="page-title">Organization Dashboard</h1><p className="page-desc">Manage your events and volunteers</p></div>
-                <button className="btn btn-primary" onClick={() => { setShowEventForm(true); setTab('events'); }}>+ New Event</button>
               </div>
               <div className="stats-grid">
                 <div className="stat-card"><div className="stat-icon">📅</div><div className="stat-value">{(analytics.totalEvents as number) || 0}</div><div className="stat-label">Total Events</div></div>
@@ -153,9 +152,6 @@ function OrgDashboardContent() {
             <>
               <div className="page-header-row" style={{ marginBottom: '1.5rem' }}>
                 <div><h1 className="page-title">Events</h1><p className="page-desc">Create and manage volunteer events</p></div>
-                <button className="btn btn-primary" onClick={() => setShowEventForm(v => !v)}>
-                  {showEventForm ? 'Cancel' : '+ New Event'}
-                </button>
               </div>
 
               {showEventForm && (

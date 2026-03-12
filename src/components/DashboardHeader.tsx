@@ -24,16 +24,7 @@ export default function DashboardHeader() {
         </div>
 
         <div className="navbar-actions">
-          {user?.role === 'ORGANIZATION' && (
-            <Link href="/dashboard/organization?action=new-event" className="btn btn-primary btn-sm">
-              + Register Event
-            </Link>
-          )}
-          {user?.role === 'VOLUNTEER' && (
-            <Link href="/organizations" className="btn btn-secondary btn-sm">
-              + Register Organization
-            </Link>
-          )}
+
           
           <div style={{ width: '1px', height: '24px', background: 'var(--border)', margin: '0 0.5rem' }}></div>
           

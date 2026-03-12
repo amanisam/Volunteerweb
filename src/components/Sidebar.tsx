@@ -13,12 +13,12 @@ export default function Sidebar() {
   const isVol = user?.role === 'VOLUNTEER';
 
   const menuItems = [
-    { label: 'Dashboard', href: isAdmin ? '/dashboard/admin' : isOrg ? '/dashboard/organization' : '/dashboard/volunteer', icon: '🏠' },
-    { label: 'Events', href: '/events', icon: '📅' },
-    { label: 'My Activities', href: isVol ? '/dashboard/volunteer?tab=history' : isOrg ? '/dashboard/organization?tab=events' : '#', icon: '📋', hide: isAdmin },
-    { label: 'Organizations', href: '/organizations', icon: '🏢' },
-    { label: 'Volunteers', href: isAdmin ? '/dashboard/admin?tab=users' : isOrg ? '/dashboard/organization?tab=volunteers' : '#', icon: '👥', hide: isVol },
-    { label: 'Analytics', href: isAdmin ? '/dashboard/admin' : isOrg ? '/dashboard/organization?tab=analytics' : '/dashboard/volunteer', icon: '📊' },
+    { label: 'Dashboard', href: isAdmin ? '/dashboard/admin' : isOrg ? '/dashboard/organization' : '/dashboard/volunteer', id: 'dashboard', icon: '🏠' },
+    { label: 'Events', href: '/events', id: 'events', icon: '📅' },
+    { label: 'Register Event', href: '/events/register', id: 'register-event', icon: '➕', hide: !isOrg },
+    { label: 'Organizations', href: '/organizations', id: 'organizations', icon: '🏢' },
+    { label: 'Volunteers', href: isAdmin ? '/dashboard/admin?tab=users' : isOrg ? '/dashboard/organization?tab=volunteers' : '#volunteers', id: 'volunteers', icon: '👥', hide: isVol },
+    { label: 'Analytics', href: isAdmin ? '/dashboard/admin' : isOrg ? '/dashboard/organization?tab=analytics' : '/dashboard/volunteer', id: 'analytics', icon: '📊' },
   ].filter(item => !item.hide);
 
   return (
@@ -27,7 +27,7 @@ export default function Sidebar() {
         <div className="sidebar-label">Main Menu</div>
         {menuItems.map((item) => (
           <Link 
-            key={item.href} 
+            key={item.id} 
             href={item.href} 
             className={`sidebar-item ${pathname === item.href ? 'active' : ''}`}
           >

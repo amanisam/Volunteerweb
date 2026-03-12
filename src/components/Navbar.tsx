@@ -23,9 +23,7 @@ export default function Navbar() {
           {user ? (
             <>
               {dashboardHref && <Link href={dashboardHref} className="btn btn-ghost btn-sm">Dashboard</Link>}
-              {user.role === 'ORGANIZATION' && (
-                <Link href="/dashboard/organization?action=new-event" className="btn btn-primary btn-sm">+ Add Event</Link>
-              )}
+
               <span style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginLeft: '0.5rem' }}>{user.name}</span>
               <button className="btn btn-ghost btn-sm" onClick={() => signOut()}>Sign out</button>
             </>
