@@ -545,14 +545,6 @@
   ],
   "registrations": [
     {
-      "volunteerId": "3f816cbd-55c0-4088-8991-3093866ec61b",
-      "eventId": "b6f4078c-1c3b-439e-b26b-4486c6a29e5b",
-      "status": "PENDING",
-      "matchedScore": 42,
-      "id": "5fca4b14-cd2d-4b48-9a27-4124bcbf57ca",
-      "createdAt": "2026-03-11T20:39:12.388Z"
-    },
-    {
       "volunteerId": "150bbf93-fac7-4510-944c-83b7e916dd9d",
       "eventId": "b6f4078c-1c3b-439e-b26b-4486c6a29e5b",
       "status": "PENDING",
@@ -575,6 +567,14 @@
       "matchedScore": 64.3,
       "id": "a8ebf043-207a-477a-bca9-8325fe7829b8",
       "createdAt": "2026-03-12T19:23:27.686Z"
+    },
+    {
+      "volunteerId": "3f816cbd-55c0-4088-8991-3093866ec61b",
+      "eventId": "814aa77d-b2a1-4b1d-969b-d190c312b3cb",
+      "status": "APPROVED",
+      "matchedScore": 42,
+      "id": "bbbc5a87-f9da-418a-b0f0-265313836203",
+      "createdAt": "2026-03-12T20:42:20.719Z"
     }
   ],
   "taskAssignments": [],
@@ -592,6 +592,13 @@
       "verified": false,
       "feedback": "did several codes and production",
       "id": "f1605302-a559-49da-96ca-71ef067e3d76"
+    },
+    {
+      "registrationId": "bbbc5a87-f9da-418a-b0f0-265313836203",
+      "hoursLogged": 8,
+      "verified": false,
+      "feedback": "cooked for 50 people",
+      "id": "b3a1397b-cafe-499c-9735-46b03076a389"
     }
   ],
   "impactMetrics": [
@@ -700,6 +707,22 @@
       "read": false,
       "id": "b91eec84-6c5c-4397-8bad-b6ebc0979c99",
       "createdAt": "2026-03-12T19:23:27.689Z"
+    },
+    {
+      "userId": "c40ee56f-abca-4b03-a4e2-8497ca8a85d4",
+      "message": "You've opted out of \"Community Health Awareness Camp\".",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "dc1f4399-15e5-4fdc-af42-bbcb41ccda01",
+      "createdAt": "2026-03-12T20:42:14.805Z"
+    },
+    {
+      "userId": "c40ee56f-abca-4b03-a4e2-8497ca8a85d4",
+      "message": "You've successfully registered for \"Cooking interaction\".",
+      "type": "REGISTRATION",
+      "read": false,
+      "id": "b7324909-fb29-4132-b791-5a602dd002db",
+      "createdAt": "2026-03-12T20:42:20.726Z"
     }
   ]
 }
