@@ -16,8 +16,8 @@ export default function Navbar() {
         <Link href="/" className="navbar-logo">🌱 VCITS</Link>
         <div className="navbar-links">
           <Link href="/events" className="nav-link">Events</Link>
-          <a href="/#features" className="nav-link">Features</a>
-          <a href="/#how-it-works" className="nav-link">How it works</a>
+          <Link href="/#features" className="nav-link">Features</Link>
+          <Link href="/#how-it-works" className="nav-link">How it works</Link>
         </div>
         <div className="navbar-actions">
           {user ? (

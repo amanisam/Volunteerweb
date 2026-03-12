@@ -1,5 +1,5 @@
 'use client';
-import { useSession, signOut } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 
 export default function DashboardHeader() {
@@ -40,7 +40,7 @@ export default function DashboardHeader() {
           <button className="btn btn-ghost btn-sm" style={{ padding: '0.4rem' }}>🔔</button>
           
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginLeft: '0.5rem' }}>
-            <div style={{ textAlign: 'right', display: 'none', md: 'block' }}>
+            <div style={{ textAlign: 'right', display: 'block' }}>
               <div style={{ fontSize: '0.85rem', fontWeight: 600 }}>{user?.name || 'User'}</div>
               <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>{user?.role}</div>
             </div>

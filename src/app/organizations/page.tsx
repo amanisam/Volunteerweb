@@ -66,7 +66,7 @@ export default function OrganizationsPage() {
               {filtered.map(org => (
                 <div key={org.id} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                    <div style={{ width: '48px', height: '48px', background: 'var(--gradient-primary)', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', justifyCenter: 'center', color: 'white', fontSize: '1.5rem', fontWeight: 800 }}>
+                    <div style={{ width: '48px', height: '48px', background: 'var(--gradient-primary)', borderRadius: 'var(--radius-md)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '1.5rem', fontWeight: 800 }}>
                       {org.name.charAt(0)}
                     </div>
                     <span className="badge badge-primary">{org.eventCount} Events</span>

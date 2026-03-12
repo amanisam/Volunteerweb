@@ -78,6 +78,15 @@ export const LineChart = ({ data, labels, color = 'var(--primary)', height = 200
 };
 
 export const PieChart = ({ data, labels, colors = ['#4f46e5', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'] }: { data: number[], labels: string[], colors?: string[] }) => {
+  const total = data.reduce((acc, val) => acc + val, 0);
+  let cumulativePercent = 0;
+
+  function getCoordinatesForPercent(percent: number) {
+    const x = Math.cos(2 * Math.PI * percent);
+    const y = Math.sin(2 * Math.PI * percent);
+    return [x, y];
+  }
+
   if (total === 0) {
     return (
       <div className="chart-container" style={{ display: 'flex', alignItems: 'center', gap: '2rem', minHeight: '150px' }}>
@@ -89,18 +98,31 @@ export const PieChart = ({ data, labels, colors = ['#4f46e5', '#10b981', '#f59e0
     );
   }
 
+  // Pre-calculate segments to avoid reassigning variables during render
+  const segments = data.reduce((acc, val) => {
+    const percent = val / total;
+    const startPercent = acc.length > 0 ? acc[acc.length - 1].endPercent : 0;
+    const endPercent = startPercent + percent;
+    acc.push({
+      percent,
+      startPercent,
+      endPercent,
+      startX: Math.cos(2 * Math.PI * startPercent),
+      startY: Math.sin(2 * Math.PI * startPercent),
+      endX: Math.cos(2 * Math.PI * endPercent),
+      endY: Math.sin(2 * Math.PI * endPercent),
+    });
+    return acc;
+  }, [] as { percent: number; startPercent: number; endPercent: number; startX: number; startY: number; endX: number; endY: number }[]);
+
   return (
     <div className="chart-container" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
       <svg viewBox="-1 -1 2 2" style={{ transform: 'rotate(-90deg)', width: '150px', height: '150px' }}>
-        {data.map((val, i) => {
-          const percent = val / total;
-          const [startX, startY] = getCoordinatesForPercent(cumulativePercent);
-          cumulativePercent += percent;
-          const [endX, endY] = getCoordinatesForPercent(cumulativePercent);
-          const largeArcFlag = percent > 0.5 ? 1 : 0;
+        {segments.map((seg, i) => {
+          const largeArcFlag = seg.percent > 0.5 ? 1 : 0;
           const pathData = [
-            `M ${startX} ${startY}`,
-            `A 1 1 0 ${largeArcFlag} 1 ${endX} ${endY}`,
+            `M ${seg.startX} ${seg.startY}`,
+            `A 1 1 0 ${largeArcFlag} 1 ${seg.endX} ${seg.endY}`,
             'L 0 0',
           ].join(' ');
           return <path key={i} d={pathData} fill={colors[i % colors.length]} />;

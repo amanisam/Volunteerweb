@@ -1,7 +1,14 @@
-import { NextAuthOptions, User as NextAuthUser } from 'next-auth';
+import { NextAuthOptions, User as NextAuthUser, Session } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import crypto from 'crypto';
 import { db } from './db';
+
+export interface SessionUser {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+}
 
 // ---- Built-in crypto password helpers (no external deps) ----
 export function hashPassword(password: string): Promise<string> {
@@ -58,8 +65,9 @@ export const authOptions: NextAuthOptions = {
     },
     async session({ session, token }) {
       if (session.user) {
-        (session.user as NextAuthUser & { role: string; id: string }).role = token.role as string;
-        (session.user as NextAuthUser & { role: string; id: string }).id = token.id as string;
+        const user = session.user as SessionUser;
+        user.role = token.role as string;
+        user.id = token.id as string;
       }
       return session;
     },

@@ -26,7 +26,6 @@ export default function AdminDashboard() {
   if (loading) return <div className="loading-state"><div className="spinner" style={{ width: 40, height: 40 }}></div><p>Loading...</p></div>;
 
   return (
-  return (
     <div className="main-content fade-in">
           <div className="navbar-links" style={{ display: 'flex', gap: '0.5rem', background: 'var(--bg-elevated)', padding: '0.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border)', marginBottom: '2rem', width: 'fit-content' }}>
             {(['overview', 'users', 'system'] as const).map(t => (
